@@ -9,15 +9,15 @@ def index(request):
     return render(request, template, context)
 
 
-def post_detail(request, id):
+def post_detail(request, post_id):
     try:
         template = 'blog/detail.html'
         context = {
-            'post': posts[id]
+            'post': posts[post_id]
         }
         return render(request, template, context)
     except KeyError:
-        raise Http404("Post does not exist")
+        raise Http404('Post does not exist')
 
 
 def category_posts(request, category_slug):

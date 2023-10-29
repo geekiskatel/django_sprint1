@@ -3,12 +3,14 @@
  <article>
   <ul>
     <li>
-      {{ post.location }}
+      {{ post.location }}. {{ post.date }}
     </li>
     <li>
       {{ post.date }}
     </li>
     <li>
       Категория:  <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a>
-  </li>
-    {% endblock %}
+    </li>
+  </ul>
+ </article>
+{% endblock %}

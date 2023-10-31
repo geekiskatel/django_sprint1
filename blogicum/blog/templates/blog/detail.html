@@ -4,9 +4,9 @@
 {% block content %}
   {% include 'includes/article.html' %}
   <p>
-      {{post.text|linebreaksbr}}
+    {{post.text|linebreaksbr}}
   </p>
   <p>
-      <a href="{% url 'blog:post_detail' post.id %}"></a>
+    <a href="{% url 'blog:post_detail' post.id %}"></a>
   </p>
 {% endblock %}
